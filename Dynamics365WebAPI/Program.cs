@@ -24,10 +24,6 @@ builder.Services.AddSwaggerGen(options =>
         Description = "An ASP.NET Core Web API for middleware between D365 and another software.",
     });
 
-
-    // using System.Reflection;
-    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
 
 builder.Services.AddScoped<IDynamics365Repository, Dynamics365Repository>();
